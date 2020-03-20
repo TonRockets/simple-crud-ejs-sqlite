@@ -1,6 +1,7 @@
 const express = require('express')
 const sqlite = require('sqlite')
 const bodyParser = require('body-parser')
+const path = ('path')
 const app = express()
 
 const port = process.env.PORT || 3000
@@ -11,7 +12,7 @@ app.use(express.json())
 app.use(express.static('public'))
 app.use(bodyParser.urlencoded({ extended: true }))
 
-const dbConnection = sqlite.open('banco.sqlite', {
+const dbConnection = sqlite.open(path.resolve(__dirname, 'banco.sqlite'), {
     Promise
 })
 
