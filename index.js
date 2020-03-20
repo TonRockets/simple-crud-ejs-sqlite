@@ -3,7 +3,7 @@ const sqlite = require('sqlite')
 const bodyParser = require('body-parser')
 const app = express()
 
-
+const port = process.env.PORT || 3000
 
 app.set('view engine', 'ejs')
 
@@ -135,6 +135,6 @@ const init = async () => {
 }
 init()
 
-app.listen(3000, () => {
+app.listen(port, () => {
     console.log('Jobify iniciado. Rodando na porta 3000')
 })
