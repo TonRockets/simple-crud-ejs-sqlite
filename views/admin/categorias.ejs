@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>Rocket</title>
+        <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+        <link href="/style.css" rel="stylesheet" >
+    </head>
+    <body>
+       <%- include('header') %>
+        <aside>
+            <h2>
+                Administrador de Categorias:
+                <a href="/admin/novacategoria" >Nova Categoria</a></h2>
+            <div>
+                <% categorias.forEach( categoria => { %>
+                <ul>
+                    <li> <%- categoria.categoria %> | 
+                        <a href="/admin/categoria/delete/<%- categoria.id%>" >Excluir</a>
+                        <a href="/admin/categoria/update/<%- categoria.id%>" >Editar</a>
+                    </li>
+                    
+                </ul>
+                <% }) %>
+            </div>
+        </aside>
+    </body>
+</html>
+    

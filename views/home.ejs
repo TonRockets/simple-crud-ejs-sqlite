@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>Rocket</title></title>
+        <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+        <link href="/style.css" rel="stylesheet" >
+    </head>
+    <body>
+        <div>
+            <%- include('header')%>
+            <p><a href="admin" >Administrador</a></p>
+            <aside>
+                <h2>Conheça nossas vagas:</h2>    
+                <% categorias.forEach( categoria => { %>           
+                    <div>
+                        <h3><%- categoria.categoria %></h3>
+                        <ul>  
+                            <% categoria.vagas.forEach( vaga => { %>                        
+                                <li><a href="vaga/<%- vaga.id %>"><%- vaga.titulo %></a></li>
+                            <% }) %>                                          
+                        </ul> 
+                    </div>
+                <% }) %>
+            </aside>
+        </div>
+    </body>
+</html>
