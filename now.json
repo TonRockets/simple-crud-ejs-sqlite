@@ -11,9 +11,5 @@
             "src": "./*",
             "dest": "index.js"
         }
-    ],
-    "rewrites": [
-        { "source": "/update/:id", "destination": "/api/update" },
-        { "source": "/remove/:id", "destination": "/api/remove" }
     ]
 }
