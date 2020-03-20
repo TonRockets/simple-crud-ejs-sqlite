@@ -1,7 +1,7 @@
 const express = require('express')
 const sqlite = require('sqlite')
 const bodyParser = require('body-parser')
-const path = ('path')
+const path = require ('path')
 const app = express()
 
 const port = process.env.PORT || 3000
